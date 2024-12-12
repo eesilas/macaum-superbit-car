@@ -107,18 +107,27 @@ SuperBit.RGB_Program().showRainbow(80, 360)
 speed = 172
 mspeed = -172
 basic.forever(function () {
-    huskylens.request()
-    if (huskylens.isLearned(1)) {
-        F()
-    } else if (huskylens.isLearned(2)) {
-        B()
-    } else if (huskylens.isLearned(3)) {
-        L()
-    } else if (huskylens.isLearned(4)) {
-        R()
-    } else if (huskylens.isLearned(5)) {
-        test()
+    if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+        huskylens.request()
+        if (huskylens.isAppear(1, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+            basic.showNumber(1)
+            F()
+        } else if (huskylens.isAppear(2, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+            basic.showNumber(2)
+            B()
+        } else if (huskylens.isAppear(3, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+            basic.showNumber(3)
+            L()
+        } else if (huskylens.isAppear(4, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+            basic.showNumber(4)
+            R()
+        } else if (huskylens.isAppear(5, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+            basic.showNumber(5)
+            test()
+        } else {
+            stop()
+        }
     } else {
-        stop()
+        basic.showIcon(IconNames.Meh)
     }
 })

@@ -107,8 +107,8 @@ SuperBit.RGB_Program().showRainbow(80, 360)
 speed = 172
 mspeed = -172
 basic.forever(function () {
+    huskylens.request()
     if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
-        huskylens.request()
         if (huskylens.isAppear(1, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
             basic.showNumber(1)
             F()

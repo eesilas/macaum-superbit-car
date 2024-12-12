@@ -129,5 +129,6 @@ basic.forever(function () {
         }
     } else {
         basic.showIcon(IconNames.Meh)
+        stop()
     }
 })

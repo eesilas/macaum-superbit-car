@@ -104,8 +104,9 @@ let speed = 0
 huskylens.initI2c()
 huskylens.initMode(protocolAlgorithm.ALGORITHM_TAG_RECOGNITION)
 SuperBit.RGB_Program().showRainbow(80, 360)
-speed = 172
-mspeed = -172
+let _var = 172
+speed = _var
+mspeed = 0 - _var
 basic.forever(function () {
     huskylens.request()
     if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {

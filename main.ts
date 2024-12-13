@@ -122,8 +122,8 @@ basic.forever(function () {
         } else if (huskylens.isAppear(4, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
             basic.showNumber(4)
             R()
-        } else if (huskylens.isAppear(5, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
-            basic.showNumber(5)
+        } else if (huskylens.isAppear(6, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+            basic.showNumber(6)
             test()
         } else {
             stop()
